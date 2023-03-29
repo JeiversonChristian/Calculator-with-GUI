@@ -19,10 +19,9 @@ from tkinter import *
 # Functions
 
 #In case you want to discover the coordinates of your window and get the dimension you wish:
-def left_mouse_click(retorno):
-    print(f'x: {retorno.x} | y: {retorno.y} Geo: {master.geometry()}')
+'''def left_mouse_click(retorno):
+    print(f'x: {retorno.x} | y: {retorno.y} Geo: {master.geometry()}')'''
 
-'''
 def left_mouse_click(arg):
     global flag, x1, y1
     # global variables - I don't know yet why they must to be global
@@ -36,7 +35,11 @@ def left_mouse_click(arg):
         y1 = arg.y
 
     else:
-        print(f'width={arg.x-x1}, height={arg.y-y1}, x={x1}, y={y1}')'''
+        print(f'width={arg.x-x1}, height={arg.y-y1}, x={x1}, y={y1}')
+
+
+def calcular (x):
+    print(x)
 
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
@@ -103,12 +106,23 @@ answer_field.place(width=460, height=69, x=84, y=73)
 
 #--------------------------------------------------------------------------------------------------------------
 
-'''# Creating Buttons
+# Creating Buttons
 
 bt1 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
-bt2 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
-bt3 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
-bt4 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))'''
+bt2 = Button(master, text="-", anchor=S, font="Arial 30", command=lambda: calcular(2))
+bt3 = Button(master, text=":", font="Arial 30", command=lambda: calcular(3))
+bt4 = Button(master, text="x", anchor=N, font="Arial 30", command=lambda: calcular(4))
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Placing Buttons
+
+bt1.place(width=97, height=55, x=61, y=335)
+bt2.place(width=97, height=55, x=197, y=335)
+bt3.place(width=97, height=55, x=333, y=335)
+bt4.place(width=97, height=55, x=469, y=335)
+
+#--------------------------------------------------------------------------------------------------------------
 
 # events
 master.bind("<Button-1>", left_mouse_click)
