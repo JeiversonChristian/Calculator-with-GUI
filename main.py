@@ -124,6 +124,20 @@ bt4.place(width=97, height=55, x=469, y=335)
 
 #--------------------------------------------------------------------------------------------------------------
 
+# Entry boxes
+
+num1 = Entry(master, font="Arial 20", justify=CENTER)
+num2 = Entry(master, font="Arial 20", justify=CENTER)
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Placing Entry Boxes
+
+num1.place(width=185, height=40, x=84, y=220)
+num2.place(width=185, height=40, x=359, y=220)
+
+#--------------------------------------------------------------------------------------------------------------
+
 # events
 master.bind("<Button-1>", left_mouse_click)
 # Button 1 is the left mouse button
@@ -134,4 +148,5 @@ master.bind("<Button-1>", left_mouse_click)
 master.mainloop()
 # To open the window - that's going to open a window, in a randon place, in looping watting an event to happen
 
+#--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
