@@ -12,12 +12,12 @@ from tkinter import *
 # Functions
 
 
-'''
-In case you want to discover the coordinates of your window and get the dimension you wish:
+
+#In case you want to discover the coordinates of your window and get the dimension you wish:
 def left_mouse_click(retorno):
     print(f'x: {retorno.x} | y: {retorno.y} Geo: {master.geometry()}')
-'''
 
+'''
 def left_mouse_click(arg):
     global flag, x1, y1
     # global variables - I don't know yet why they must to be global
@@ -31,7 +31,7 @@ def left_mouse_click(arg):
         y1 = arg.y
 
     else:
-        print(f'width={arg.x-x1}, height={arg.y-y1}, x={x1}, y={y1}')
+        print(f'width={arg.x-x1}, height={arg.y-y1}, x={x1}, y={y1}')'''
 
 #--------------------------------------------------------------------------------------------------------------
 
@@ -77,7 +77,8 @@ calc_image = PhotoImage(file="images/calculator.png")
 calc_label = Label(master, image=calc_image)
 # label where the image of the calculator is going to be binded
 
-resposta = Label(master, font="Arial 40", text = "0")
+answer_field = Label(master, font="Arial 40", text = "0")
+# label where is going to be showed the answer
 
 #--------------------------------------------------------------------------------------------------------------
 
@@ -86,7 +87,8 @@ resposta = Label(master, font="Arial 40", text = "0")
 calc_label.place(x=-25, y=-80)
 # calculator label
 
-resposta.place(width=398, height=56, x=61, y=67)
+answer_field.place(width=460, height=69, x=84, y=73)
+# answer_field label
 
 #--------------------------------------------------------------------------------------------------------------
 
