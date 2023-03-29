@@ -1,3 +1,5 @@
+# Libraries
+
 from tkinter import *
 
 # "tkinter" provides a robust, platform-independent windowing toolkit that is available to Python programmers
@@ -7,8 +9,38 @@ from tkinter import *
 
 #--------------------------------------------------------------------------------------------------------------
 
+# Functions
+
+
+'''
+In case you want to discover the coordinates of your window and get the dimension you wish:
+def left_mouse_click(retorno):
+    print(f'x: {retorno.x} | y: {retorno.y} Geo: {master.geometry()}')
+'''
+
+def left_mouse_click(arg):
+    global flag, x1, y1
+    # global variables - I don't know yet why they must to be global
+    
+    # Flag begin valuing 0 - which means False
+    # So, "not flag" inverts the value to 1 - True
+    flag = not flag
+
+    if flag:
+        x1 = arg.x
+        y1 = arg.y
+
+    else:
+        print(f'width={arg.x-x1}, height={arg.y-y1}, x={x1}, y={y1}')
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Main
+
+#--------------------------------------------------------------------------------------------------------------
+
 master = Tk()
-# Instantiating the class to the variable "master"
+# Instantiating the class to the variable "master" - to our master window
 # So we can use all the functions of the class through the variable "master"
 
 master.title(" Calculator ")
@@ -17,10 +49,62 @@ master.title(" Calculator ")
 master.iconbitmap(default="icons/calculator.ico")
 # To add (replacing) an icon on the window
 
-master.geometry("300x500+0+0")
+master.geometry("630x510+385+84")
 # To position the window
 # width x height + dist from left + dist from top
 # Unit of measurement: pixel
 
+master.wm_resizable(width=False, height=False)
+# Locking the dimensions of the window
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Global Variables
+
+flag = x1 = y1 = x = 0
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Importing Images
+
+calc_image = PhotoImage(file="images/calculator.png")
+# calculator image
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Creating Labels
+
+calc_label = Label(master, image=calc_image)
+# label where the image of the calculator is going to be binded
+
+resposta = Label(master, font="Arial 40", text = "0")
+
+#--------------------------------------------------------------------------------------------------------------
+
+# Placing Labels
+
+calc_label.place(x=-25, y=-80)
+# calculator label
+
+resposta.place(width=398, height=56, x=61, y=67)
+
+#--------------------------------------------------------------------------------------------------------------
+
+'''# Creating Buttons
+
+bt1 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
+bt2 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
+bt3 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
+bt4 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))'''
+
+# events
+master.bind("<Button-1>", left_mouse_click)
+# Button 1 is the left mouse button
+# Button 2 is the middle mouse button
+# Button 3 is the right mouse button
+# "bind" literally bind the <Button-x> to the function used as parameter
+
 master.mainloop()
 # To open the window - that's going to open a window, in a randon place, in looping watting an event to happen
+
+#--------------------------------------------------------------------------------------------------------------
