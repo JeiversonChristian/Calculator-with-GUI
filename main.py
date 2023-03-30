@@ -1,6 +1,5 @@
 # falta ainda:
-# comentar código da função calcular
-# criar botão de resete
+# criar botão de resete - mudar o design do botão para retangular
 # pesquisar sobre Tk() pra tentar entender o que é exatamente
 
 #--------------------------------------------------------------------------------------------------------------
