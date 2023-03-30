@@ -109,9 +109,9 @@ answer_field.place(width=460, height=69, x=84, y=73)
 # Creating Buttons
 
 bt1 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
-bt2 = Button(master, text="-", anchor=S, font="Arial 30", command=lambda: calcular(2))
+bt2 = Button(master, text="-", font="Arial 30", command=lambda: calcular(2))
 bt3 = Button(master, text=":", font="Arial 30", command=lambda: calcular(3))
-bt4 = Button(master, text="x", anchor=N, font="Arial 30", command=lambda: calcular(4))
+bt4 = Button(master, text="x", font="Arial 30", command=lambda: calcular(4))
 
 #--------------------------------------------------------------------------------------------------------------
 
