@@ -24,7 +24,7 @@ from tkinter import *
 # Functions
 
 def calculate (option):
-    global num1, num2, x, div_by_zero
+    global x, div_by_zero
 
     div_by_zero = 0
 
