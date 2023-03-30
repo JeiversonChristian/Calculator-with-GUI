@@ -1,5 +1,4 @@
 # falta ainda:
-# deixar respostas inteiras como inteiras
 # comentar código da função calcular
 # criar botão de resete
 # pesquisar sobre Tk() pra tentar entender o que é exatamente
@@ -44,7 +43,8 @@ def calculate (option):
                 div_by_zero = 1
         elif option == 4:
             answer = float(num1.get()) * float(num2.get())
-
+        if answer.is_integer():
+            answer = int(answer)
         if div_by_zero == 0:
             return answer_field.config(text=round(answer, 4))
         else:
