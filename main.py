@@ -18,8 +18,34 @@ from tkinter import *
 
 # Functions
 
-def calcular (x):
-    print(x)
+def calculate (option):
+    global answer_field, num1, num2, x, div_by_zero
+
+    div_by_zero = 0
+
+    try:
+        float(num1.get())
+        float(num2.get())
+
+        if option == 1:
+            x = float(num1.get()) + float(num2.get())
+        elif option == 2:
+            x = float(num1.get()) - float(num2.get())
+        elif option == 3:
+            try:
+                x = float(num1.get()) / float(num2.get())
+            except ZeroDivisionError:
+                div_by_zero = 1
+        elif option == 4:
+            x = float(num1.get()) * float(num2.get())
+
+        if div_by_zero == 0:
+            return answer_field.config(text=round(x, 4))
+        else:
+            return answer_field.config(text="Division by zero")
+    except ValueError:
+        answer_field.config(text="Only numbers!")
+
 
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
@@ -88,10 +114,10 @@ answer_field.place(width=460, height=69, x=84, y=73)
 
 # Creating Buttons
 
-bt1 = Button(master, text="+", font="Arial 30", command=lambda: calcular(1))
-bt2 = Button(master, text="-", font="Arial 30", command=lambda: calcular(2))
-bt3 = Button(master, text=":", font="Arial 30", command=lambda: calcular(3))
-bt4 = Button(master, text="x", font="Arial 30", command=lambda: calcular(4))
+bt1 = Button(master, text="+", font="Arial 30", command=lambda: calculate(1))
+bt2 = Button(master, text="-", font="Arial 30", command=lambda: calculate(2))
+bt3 = Button(master, text=":", font="Arial 30", command=lambda: calculate(3))
+bt4 = Button(master, text="x", font="Arial 30", command=lambda: calculate(4))
 # one button for each operation, one function called for each operation
 
 #--------------------------------------------------------------------------------------------------------------
