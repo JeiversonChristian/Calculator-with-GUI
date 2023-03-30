@@ -142,6 +142,12 @@ num2.place(width=185, height=40, x=359, y=220)
 
 # Setting Initial Entry values
 
+num1.insert(END, 0)
+num2.insert(END, 0)
+# 0 will appear in the END of the place. If there was another number on it, 0 would appear after it
+
+#--------------------------------------------------------------------------------------------------------------
+
 # events
 master.bind("<Button-1>", left_mouse_click)
 # Button 1 is the left mouse button
@@ -150,7 +156,7 @@ master.bind("<Button-1>", left_mouse_click)
 # "bind" literally bind the <Button-x> to the function used as parameter
 
 master.mainloop()
-# To open the window - that's going to open a window, in a randon place, in looping watting an event to happen
+# To open the window - that's going to open a window, in looping, watting an event to happen
 
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
