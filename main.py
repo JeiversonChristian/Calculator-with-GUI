@@ -1,3 +1,8 @@
+# falta ainda:
+# comentar código da função calcular
+# criar botão de resete
+# pesquisar sobre Tk() pra tentar entender o que é exatamente
+
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
 
@@ -19,7 +24,7 @@ from tkinter import *
 # Functions
 
 def calculate (option):
-    global answer_field, num1, num2, x, div_by_zero
+    global num1, num2, x, div_by_zero
 
     div_by_zero = 0
 
