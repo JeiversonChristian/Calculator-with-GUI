@@ -25,30 +25,49 @@ from tkinter import *
 
 def calculate (option):
     global answer, div_by_zero
+    # answer is gonna save the operation answer
+    # div_by_zero is gonna check if it has been made a division by zero
 
     div_by_zero = 0
+    # Till now no divisions by zero :)
 
+    # That is gonna try to do the math until some "not number" has been typed
     try:
         float(num1.get())
         float(num2.get())
+        # Converts wich is typed on the num1 and num2 to float number
 
+        # Options is gonna decide which operations is need
         if option == 1:
             answer = float(num1.get()) + float(num2.get())
+
         elif option == 2:
             answer = float(num1.get()) - float(num2.get())
+
         elif option == 3:
+            # That is gonna try to divide until the denominator is zero
             try:
                 answer = float(num1.get()) / float(num2.get())
             except ZeroDivisionError:
                 div_by_zero = 1
+
         elif option == 4:
             answer = float(num1.get()) * float(num2.get())
-        if answer.is_integer():
-            answer = int(answer)
+
+        # If a div by zero has not been made, there is a answer
+        if div_by_zero == 0:
+            # That remains the integers answers as integers, not floats
+            if answer.is_integer():
+                answer = int(answer)
+
+        # If the operation was not a div by zero, show the answer
         if div_by_zero == 0:
             return answer_field.config(text=round(answer, 4))
+        # Else, inform that a div by zero has been made
         else:
             return answer_field.config(text="Division by zero")
+
+     # If some "not number" has been typed, inform that only numbers are allowed   
     except ValueError:
         answer_field.config(text="Only numbers!")
 
