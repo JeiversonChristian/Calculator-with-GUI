@@ -1,4 +1,5 @@
 # falta ainda:
+# deixar respostas inteiras como inteiras
 # comentar código da função calcular
 # criar botão de resete
 # pesquisar sobre Tk() pra tentar entender o que é exatamente
@@ -24,7 +25,7 @@ from tkinter import *
 # Functions
 
 def calculate (option):
-    global x, div_by_zero
+    global answer, div_by_zero
 
     div_by_zero = 0
 
@@ -33,19 +34,19 @@ def calculate (option):
         float(num2.get())
 
         if option == 1:
-            x = float(num1.get()) + float(num2.get())
+            answer = float(num1.get()) + float(num2.get())
         elif option == 2:
-            x = float(num1.get()) - float(num2.get())
+            answer = float(num1.get()) - float(num2.get())
         elif option == 3:
             try:
-                x = float(num1.get()) / float(num2.get())
+                answer = float(num1.get()) / float(num2.get())
             except ZeroDivisionError:
                 div_by_zero = 1
         elif option == 4:
-            x = float(num1.get()) * float(num2.get())
+            answer = float(num1.get()) * float(num2.get())
 
         if div_by_zero == 0:
-            return answer_field.config(text=round(x, 4))
+            return answer_field.config(text=round(answer, 4))
         else:
             return answer_field.config(text="Division by zero")
     except ValueError:
