@@ -18,26 +18,6 @@ from tkinter import *
 
 # Functions
 
-#In case you want to discover the coordinates of your window and get the dimension you wish:
-'''def left_mouse_click(retorno):
-    print(f'x: {retorno.x} | y: {retorno.y} Geo: {master.geometry()}')'''
-
-def left_mouse_click(arg):
-    global flag, x1, y1
-    # global variables - I don't know yet why they must to be global
-    
-    # Flag begin valuing 0 - which means False
-    # So, "not flag" inverts the value to 1 - True
-    flag = not flag
-
-    if flag:
-        x1 = arg.x
-        y1 = arg.y
-
-    else:
-        print(f'width={arg.x-x1}, height={arg.y-y1}, x={x1}, y={y1}')
-
-
 def calcular (x):
     print(x)
 
@@ -147,13 +127,6 @@ num2.insert(END, 0)
 # 0 will appear in the END of the place. If there was another number on it, 0 would appear after it
 
 #--------------------------------------------------------------------------------------------------------------
-
-# events
-master.bind("<Button-1>", left_mouse_click)
-# Button 1 is the left mouse button
-# Button 2 is the middle mouse button
-# Button 3 is the right mouse button
-# "bind" literally bind the <Button-x> to the function used as parameter
 
 master.mainloop()
 # To open the window - that's going to open a window, in looping, watting an event to happen
