@@ -1,6 +1,6 @@
 # falta ainda:
-# criar botão de resete - mudar o design do botão para retangular
 # pesquisar sobre Tk() pra tentar entender o que é exatamente
+# Tentar fazer o zero sumir quando clicar na entry boxe
 
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
@@ -53,8 +53,17 @@ def calculate (option):
         elif option == 4:
             answer = float(num1.get()) * float(num2.get())
 
+        # Resenting the answer and the entry boxes
+        elif option == 5:
+            answer = 0
+            num1.delete(0, END)
+            num1.insert(END, 0)
+            num2.delete(0, END)
+            num2.insert(END, 0)
+
         # If a div by zero has not been made, there is a answer
-        if div_by_zero == 0:
+        # If the option is 5, so the answer is already a integer (the number 0)
+        if div_by_zero == 0 and option != 5:
             # That remains the integers answers as integers, not floats
             if answer.is_integer():
                 answer = int(answer)
