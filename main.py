@@ -1,6 +1,7 @@
 # falta ainda:
 # pesquisar sobre Tk() pra tentar entender o que é exatamente
 # Tentar fazer o zero sumir quando clicar na entry boxe
+# Colocar um executável ou um link para execução online
 
 #--------------------------------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------------------------------
