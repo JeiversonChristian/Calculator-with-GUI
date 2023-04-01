@@ -30,54 +30,56 @@ def calculate (option):
     div_by_zero = 0
     # Till now no divisions by zero :)
 
-    # That is gonna try to do the math until some "not number" has been typed
-    try:
-        float(num1.get())
-        float(num2.get())
-        # Converts wich is typed on the num1 and num2 to float number
+    if option == 5:
+        # Resenting the answer and the entry boxes and the answer
+        answer = 0
+        num1.delete(0, END)
+        num1.insert(END, 0)
+        num2.delete(0, END)
+        num2.insert(END, 0)
+        return answer_field.config(text=answer)
+    
+    else:        
 
-        # Options is gonna decide which operations is need
-        if option == 1:
-            answer = float(num1.get()) + float(num2.get())
+        # That is gonna try to do the math until some "not number" has been typed
+        try:
+            float(num1.get())
+            float(num2.get())
+            # Converts wich is typed on the num1 and num2 to float number
 
-        elif option == 2:
-            answer = float(num1.get()) - float(num2.get())
+            # Options is gonna decide which operations is need
+            if option == 1:
+                answer = float(num1.get()) + float(num2.get())
 
-        elif option == 3:
-            # That is gonna try to divide until the denominator is zero
-            try:
-                answer = float(num1.get()) / float(num2.get())
-            except ZeroDivisionError:
-                div_by_zero = 1
+            elif option == 2:
+                answer = float(num1.get()) - float(num2.get())
 
-        elif option == 4:
-            answer = float(num1.get()) * float(num2.get())
+            elif option == 3:
+                # That is gonna try to divide until the denominator is zero
+                try:
+                    answer = float(num1.get()) / float(num2.get())
+                except ZeroDivisionError:
+                    div_by_zero = 1
 
-        # Resenting the answer and the entry boxes
-        elif option == 5:
-            answer = 0
-            num1.delete(0, END)
-            num1.insert(END, 0)
-            num2.delete(0, END)
-            num2.insert(END, 0)
+            elif option == 4:
+                answer = float(num1.get()) * float(num2.get())            
 
-        # If a div by zero has not been made, there is a answer
-        # If the option is 5, so the answer is already a integer (the number 0)
-        if div_by_zero == 0 and option != 5:
-            # That remains the integers answers as integers, not floats
-            if answer.is_integer():
-                answer = int(answer)
+            # If a div by zero has not been made, there is a answer
+            if div_by_zero == 0:
+                # That remains the integers answers as integers, not floats
+                if answer.is_integer():
+                    answer = int(answer)
 
-        # If the operation was not a div by zero, show the answer
-        if div_by_zero == 0:
-            return answer_field.config(text=round(answer, 4))
-        # Else, inform that a div by zero has been made
-        else:
-            return answer_field.config(text="Division by zero")
+            # If the operation was not a div by zero, show the answer
+            if div_by_zero == 0:
+                return answer_field.config(text=round(answer, 4))
+            # Else, inform that a div by zero has been made
+            else:
+                return answer_field.config(text="Division by zero")
 
-     # If some "not number" has been typed, inform that only numbers are allowed   
-    except ValueError:
-        answer_field.config(text="Only numbers!")
+        # If some "not number" has been typed, inform that only numbers are allowed   
+        except ValueError:
+            answer_field.config(text="Only numbers!")
 
 
 #--------------------------------------------------------------------------------------------------------------
