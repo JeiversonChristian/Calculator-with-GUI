@@ -142,6 +142,7 @@ bt1 = Button(master, text="+", font="Arial 30", command=lambda: calculate(1))
 bt2 = Button(master, text="-", font="Arial 30", command=lambda: calculate(2))
 bt3 = Button(master, text=":", font="Arial 30", command=lambda: calculate(3))
 bt4 = Button(master, text="x", font="Arial 30", command=lambda: calculate(4))
+bt5 = Button(master, text="C", font="Arial 30", command=lambda: calculate(5))
 # one button for each operation, one function called for each operation
 
 #--------------------------------------------------------------------------------------------------------------
@@ -152,6 +153,7 @@ bt1.place(width=97, height=55, x=61, y=335)
 bt2.place(width=97, height=55, x=197, y=335)
 bt3.place(width=97, height=55, x=333, y=335)
 bt4.place(width=97, height=55, x=469, y=335)
+bt5.place(width=97, height=55, x=265, y=420)
 
 #--------------------------------------------------------------------------------------------------------------
 
