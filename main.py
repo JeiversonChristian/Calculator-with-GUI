@@ -1,6 +1,4 @@
 # falta ainda:
-# pesquisar sobre Tk() pra tentar entender o que é exatamente
-# Tentar fazer o zero sumir quando clicar na entry boxe
 # Colocar um executável ou um link para execução online
 
 #--------------------------------------------------------------------------------------------------------------
@@ -96,8 +94,9 @@ def calculate (option):
 # Creating the master window
 
 master = Tk()
-# Instantiating the class to the variable "master" - to our master window
-# So we can use all the functions of the class through the variable "master"
+# Instantiating the object Tk() of the class to the variable "master" - to our "master window"
+# So we can use all the functions of that object of the class through the variable "master"
+# An object is a collection of variables and methods (functions).
 
 master.title(" Calculator ")
 # Application title
