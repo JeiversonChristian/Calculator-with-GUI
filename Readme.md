@@ -10,8 +10,10 @@ A calculator with GUI (Graphical User Interface) made with Python 3.
 
 ## Cretdits
 
-This project has this [tutorial](https://www.youtube.com/watch?v=VpeJKjWiOVk&t=699s) as base.
+* This project has this [tutorial](https://www.youtube.com/watch?v=VpeJKjWiOVk&t=699s) as base.
 But I'd upgrated it to a better version.
+
+* To learn how to create a executable file, I saw [this video](https://www.youtube.com/watch?v=cGSerUmK0CE&t=1s).
 
 ## Upgrades
 
