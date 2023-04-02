@@ -3,9 +3,9 @@
 
 A calculator with GUI (Graphical User Interface) made with Python 3.
 
-### How to run this project
+## How to run this project
 
-To Run this project, we have two options:
+To run this project, we have two options:
 
 1) First
     * Download de main.py file and the folders "images" and "icons".
