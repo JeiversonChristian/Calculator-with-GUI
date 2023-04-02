@@ -25,4 +25,4 @@ But I'd upgrated it to a better version.
 
 * In Python3, Tkinter is come pre installed. Butt we can also install it by using the command:
 
-    `pip install tkinter.`
+    `pip install tkinter`
