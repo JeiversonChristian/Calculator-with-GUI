@@ -24,11 +24,11 @@ from tkinter import *
 # Function
 
 def calculate (option):
-    global answer, div_by_zero
+    answer = 0
     # answer is gonna save the operation answer
-    # div_by_zero is gonna check if it has been made a division by zero
 
     div_by_zero = 0
+    # div_by_zero is gonna check if it has been made a division by zero
     # Till now no divisions by zero :)
 
     if option == 5:
