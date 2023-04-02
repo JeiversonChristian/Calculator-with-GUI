@@ -3,6 +3,17 @@
 
 A calculator with GUI (Graphical User Interface) made with Python 3.
 
+### How to run this project
+
+To Run this project, we have two options:
+
+1) First
+    * Download de main.py file and the folders "images" and "icons".
+    * Run the main.py file (Visual Stuio Code recommended).
+2) Second
+    * Donwload the "executable" folder files (or just the calculator.rar on it).
+    * Run the main.exe file.
+
 ## Functionalities
 
 * All basic operations (+ | - | x | :)
