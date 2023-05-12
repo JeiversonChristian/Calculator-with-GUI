@@ -3,6 +3,8 @@
 
 A calculator with GUI (Graphical User Interface) made with Python 3.
 
+## Projeto concluído
+
 ## How to run this project
 
 To run this project, we have two options:
